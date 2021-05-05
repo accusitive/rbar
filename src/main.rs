@@ -110,7 +110,7 @@ fn main() {
     for component in components.clone() {
 
         let ac = Arc::new(component);
-        let t = std::thread::spawn(move || {
+        let _t = std::thread::spawn(move || {
             loop {
                 println!("{}", ac.get_name());
                 ac.update();
